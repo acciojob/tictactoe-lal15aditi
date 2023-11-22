@@ -1,5 +1,34 @@
 //your JS code here. If required.
 // Get player names and start the game
+it('Check for initial page', () => {
+  cy.visit('your_webpage_url');
+  cy.get('#player-1').should('exist');
+  cy.get('#player-2').should('exist');
+});
+
+it('Outcome of the game: Shows player 1 win', () => {
+  cy.visit('your_webpage_url');
+  // Play the game until player 1 wins
+  // Simulate the game actions
+  // Assert player 1 wins
+  cy.get('#player-1').type('Player 1');
+  cy.get('#player-2').type('Player 2');
+  // Perform game moves...
+  cy.get('#1').click();
+  cy.get('#4').click();
+  cy.get('#2').click();
+  // Assert player 1 win message
+  cy.get('.message').should('contain', 'Player 1, congratulations you won!');
+});
+
+// Similarly, add a test for player 2 win scenario
+it('Outcome of the game: Shows player 2 win', () => {
+  cy.visit('your_webpage_url');
+  // Play the game until player 2 wins
+  // Simulate the game actions
+  // Assert player 2 wins
+});
+
 document.getElementById('submit').addEventListener('click', function() {
   const player1 = document.getElementById('player-1').value;
   const player2 = document.getElementById('player-2').value;
