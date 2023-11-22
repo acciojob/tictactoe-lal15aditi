@@ -1,1 +1,29 @@
 /*  your css code here. If applicable */
+/* Styles for the container, input-container, board, cells */
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
